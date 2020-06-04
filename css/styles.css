@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Source+Sans+Pro&display=swap');
+body{
+    color:white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* loader */
+#loader{
+	width:100%;
+	height:100vh;
+	position: fixed;
+	z-index:9999999999;
+	background-color: #0F1626;
+	overflow:hidden;
+}
+.loaders{
+	position:absolute;
+	top:45%;
+	left:45%;
+}
+#loader span{
+	width:25px;
+	height:25px;
+	margin:0 5px;
+	background:#ffd957;
+	border-radius: 50%;
+	display: inline-block;
+	animation:dots 2s ease-in-out infinite;
+}
+
+#loader span:nth-child(2){
+	background-color: #57ffa0;
+	animation-delay: 0.4s;
+}
+
+#loader span:nth-child(3){
+	background-color: #ff8b57;
+	animation-delay: 0.9s;
+}
+
+@keyframes dots{
+	50%{
+		opacity: 0;
+		transform: scale(0.7) translateY(10px);
+	}
+}
+
+#loader.show{
+    visibility: visible;
+}
+
+/* main styles */
+
+.main{
+    height:100vh;
+}
+ /* Header */
+
+.head-div{
+    display: flex;
+    height:20vh;
+    background-image: url("https://images.unsplash.com/photo-1467685790346-20bfe73a81f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    height:20px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Card */
+.user,.card-div{
+    height:auto;
+    color:black;
+}
+
+.card{
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card img:hover{
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer{
+    height:55px;
+    background-color: #162447;
+}
+
+footer p{
+    height:55px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
